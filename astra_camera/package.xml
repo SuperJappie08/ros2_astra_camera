@@ -30,6 +30,19 @@
   <depend>tf2_ros</depend>
   <depend>tf2_sensor_msgs</depend>
   <depend>tf2</depend>
+
+  <build_export_depend>libgoogle-glog-dev</build_export_depend>
+  <build_depend>libusb-1.0-dev</build_depend>
+  <build_depend>libuvc-dev</build_depend>
+  <build_depend>nlohmann-json-dev</build_depend>
+
+  <build_export_depend>eigen</build_export_depend>
+  <build_export_depend>libopencv-dev</build_export_depend>
+  <build_export_depend>libopencv-imgproc-dev</build_export_depend>
+
+<!-- libuvc-dec is not installed, however we might require a newer version than aviable. -->
+  <!-- <libuvc?> -->
+
   <export>
     <build_type>ament_cmake</build_type>
   </export>
