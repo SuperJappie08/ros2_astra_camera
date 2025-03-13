@@ -411,7 +411,6 @@ void OBCameraNode::setupPublishers() {
       bool has_subs_curr = std::any_of(publishers.begin(), publishers.end(), [](auto pub) {
         return pub.getNumSubscribers() > 0;
       });
-      std::cout << "has_subs_curr: " << has_subs_curr << std::endl;
       if(has_subs_curr && has_subscribers == false) {
         RCLCPP_INFO(node_->get_logger(), "Publishing point cloud");
         this->startStreams();

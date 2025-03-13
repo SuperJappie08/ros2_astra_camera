@@ -66,7 +66,7 @@ PointCloudXyzNode::PointCloudXyzNode(rclcpp::Node *const node,
   // create timer for publishing point cloud
   bool has_subscribers = false;
   timer_ = node_->create_wall_timer(std::chrono::milliseconds(1000), [this, &has_subscribers]() {
-      std::cout << "timer" << this->pub_point_cloud_->get_subscription_count() << std::endl;
+      // std::cout << "timer" << this->pub_point_cloud_->get_subscription_count() << std::endl;
       if(this->pub_point_cloud_->get_subscription_count() > 0 && has_subscribers == false) {
         RCLCPP_INFO(node_->get_logger(), "Publishing point cloud");
         this->connectCb();
