@@ -60,7 +60,7 @@ find_package(tf2_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_sensor_msgs REQUIRED)
 find_package(PkgConfig REQUIRED)
-
+find_package(point_cloud_transport REQUIRED)
 pkg_search_module(LIBUVC REQUIRED libuvc)
 if (NOT LIBUVC_FOUND)
   message(FATAL_ERROR "libuvc is not found")
@@ -113,6 +113,7 @@ set(dependencies
   tf2_sensor_msgs
   message_filters
   camera_info_manager
+  point_cloud_transport
   )
 
 add_library(${PROJECT_NAME} SHARED

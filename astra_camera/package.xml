@@ -32,6 +32,10 @@
   <depend>tf2</depend>
   <depend>tf2_eigen</depend>
   <depend>libuvc-dev</depend>
+  <depend>point_cloud_transport</depend>
+  <depend>draco_point_cloud_transport</depend>
+  <depend>zlib_point_cloud_transport</depend>
+  <depend>zstd_point_cloud_transport</depend>
   <export>
     <build_type>ament_cmake</build_type>
   </export>
