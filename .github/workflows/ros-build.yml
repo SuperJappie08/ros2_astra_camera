@@ -1,6 +1,6 @@
 name: ros-ci
 on:
-  pull_request:
+  pull_request: 
   push:
 permissions:
   contents: write
