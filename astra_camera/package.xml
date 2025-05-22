@@ -31,7 +31,7 @@
   <depend>tf2_sensor_msgs</depend>
   <depend>tf2</depend>
   <depend>tf2_eigen</depend>
-  <depend>libuvc-dev</depend>
+  <depend>libuvc</depend>
   <depend>point_cloud_transport</depend>
   <depend>draco_point_cloud_transport</depend>
   <depend>zlib_point_cloud_transport</depend>
