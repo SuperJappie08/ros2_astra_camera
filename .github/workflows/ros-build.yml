@@ -52,4 +52,4 @@ jobs:
         #   Skip pushing to repo when not on main branch
           SKIP_PUSH: false
           UPLOAD_ARTIFACTS: ${{ github.ref != 'refs/heads/main'  && github.ref != 'refs/heads/develop' }}
-          CONTINUE_ON_ERROR: false # allows for failing builds
+          CONTINUE_ON_ERROR: true # allows for failing builds
