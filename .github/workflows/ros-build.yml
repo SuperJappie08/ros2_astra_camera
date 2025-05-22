@@ -6,7 +6,7 @@ permissions:
   contents: write
 jobs:
   build_testing:
-    runs-on: ${{ matrix.arch == 'amd64' && 'ubuntu-22.04' || 'ubuntu-22.04-arm' }}
+    runs-on: ${{ matrix.arch == 'amd64' && 'ubuntu-22.04' || 'ubuntu-22.04' }}
     strategy:
         matrix:
                 ros_distro: [humble, 
@@ -50,6 +50,6 @@ jobs:
 
         #   SBUILD_CONF: "$enable_network = 1;"
         #   Skip pushing to repo when not on main branch
-          SKIP_PUSH: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/develop' }}
+          SKIP_PUSH: false
           UPLOAD_ARTIFACTS: ${{ github.ref != 'refs/heads/main'  && github.ref != 'refs/heads/develop' }}
-          CONTINUE_ON_ERROR: ${{ github.ref != 'refs/heads/main'  && github.ref != 'refs/heads/develop' }} # allows for failing builds
+          CONTINUE_ON_ERROR: false # allows for failing builds
