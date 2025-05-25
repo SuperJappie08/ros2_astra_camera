@@ -61,7 +61,19 @@ find_package(tf2_ros REQUIRED)
 find_package(tf2_sensor_msgs REQUIRED)
 find_package(PkgConfig REQUIRED)
 find_package(point_cloud_transport REQUIRED)
+find_package(libuvc REQUIRED)
+
 pkg_search_module(LIBUVC REQUIRED libuvc)
+get_cmake_property(_variableNames VARIABLES)
+list (SORT _variableNames)
+foreach (_variableName ${_variableNames})
+    message(STATUS "${_variableName}=${${_variableName}}")
+endforeach()
+message(STATUS "libuvc_INCLUDE_DIRS: ${LIBUVC_INCLUDE_DIRS}")
+message(STATUS "libuvc_CFLAGS: ${LIBUVC_CFLAGS}")
+message(STATUS "libuvc_LIBRARIES: ${LIBUVC_LIBRARIES}")
+message(STATUS "libuvc_VERSION: ${LIBUVC_VERSION}")
+message(STATUS "libuvc_FOUND: ${LIBUVC_FOUND}")
 if (NOT LIBUVC_FOUND)
   message(FATAL_ERROR "libuvc is not found")
 endif ()
@@ -149,7 +161,7 @@ target_link_libraries(${PROJECT_NAME}
   ${OpenCV_LIBS}
   Eigen3::Eigen
   ${GLOG_LIBRARIES}
-  ${LIBUVC_LIBRARIES}
+  LibUVC::UVCShared
   -lOpenNI2
   -L${ORBBEC_OPENNI2_REDIST}
   )
@@ -176,7 +188,7 @@ target_link_libraries(${PROJECT_NAME}_node
   ${OpenCV_LIBS}
   Eigen3::Eigen
   ${GLOG_LIBRARIES}
-  ${LIBUVC_LIBRARIES}
+  LibUVC::UVCShared
   -lOpenNI2
   -L${ORBBEC_OPENNI2_REDIST}
   ${PROJECT_NAME}
@@ -201,7 +213,7 @@ target_link_libraries(list_devices_node
   ${OpenCV_LIBS}
   Eigen3::Eigen
   ${GLOG_LIBRARIES}
-  ${LIBUVC_LIBRARIES}
+  LibUVC::UVCShared
   -lOpenNI2
   -L${ORBBEC_OPENNI2_REDIST}
   ${PROJECT_NAME}
@@ -228,7 +240,7 @@ target_link_libraries(clean_shm_node
   ${OpenCV_LIBS}
   Eigen3::Eigen
   ${GLOG_LIBRARIES}
-  ${LIBUVC_LIBRARIES}
+  LibUVC::UVCShared
   -lOpenNI2
   -L${ORBBEC_OPENNI2_REDIST}
   ${PROJECT_NAME}
