@@ -277,7 +277,7 @@ void OBCameraNode::startStreams() {
       RCLCPP_INFO_STREAM(logger_, stream_name_[stream_index] << " is started");
     }
   }
-  if (use_uvc_camera_) {
+  if (use_uvc_camera_ && uvc_camera_driver_) {
     CHECK_NOTNULL(uvc_camera_driver_);
     RCLCPP_INFO_STREAM(logger_, "Start UVC camera");
     uvc_camera_driver_->startStreaming();

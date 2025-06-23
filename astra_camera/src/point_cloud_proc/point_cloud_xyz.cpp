@@ -130,7 +130,7 @@ void PointCloudXyzNode::convertDepth(const sensor_msgs::msg::Image::ConstSharedP
 // Handles (un)subscribing when clients (un)subscribe
 void PointCloudXyzNode::connectCb() {
   std::scoped_lock<decltype(connect_mutex_)> lock(connect_mutex_);
-  if(pub_point_cloud_.getNumSubscribers() == 0) {
+  if(pub_point_cloud_.getNumSubscribers() == 0 && sub_depth_) {
     sub_depth_.shutdown();
   } else if (!sub_depth_) {
     auto custom_qos = depth_qos_profile_;
