@@ -1,0 +1,108 @@
+Package: ros-humble-astra-camera-dbgsym
+Package-Type: ddeb
+Architecture: amd64
+Version: 2-2025.06.23.10.18
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: ros-humble-astra-camera
+Maintainer: Joe Dong <jian.dong@pobox.com>
+Installed-Size: 12565
+Depends: ros-humble-astra-camera (= 2-2025.06.23.10.18)
+Filename: ./ros-humble-astra-camera-dbgsym_2-2025.06.23.10.18_amd64.ddeb
+Size: 11305156
+MD5sum: 8831d18b469c7d2cd605a72e165770b6
+SHA1: de9e846a164388e28351e2721a8adf1e5be58a70
+SHA256: a1eba676c3eed370c193559ea8c37bd10eeb4ac7025bd189a11ba875abe05156
+SHA512: 423da4bfd3055ab6f91b251a7e21c79a4683a413b5cb38d982a732b4962dd7bf3ac96a1cfa571282a7833c937473f75d696081c8d5833df02802e37eaf406150
+Description: debug symbols for ros-humble-astra-camera
+Build-Ids: 597fd70cfd27d8b759a9c886a9b9f9920110e4a4 5ac7badf79c0c91ad8523b9ce962b6426341283a 7b22aded5bd3734543d96abd1f722c141cbf52b8 a5a6f6c84a9f1c009fb62190331e235f771f3a49 ac99720f6d2f0ec44a1e383f2a5800a9001e9000 ad816cc7e021807e922cba8dd75939b16e2316ac f3c197bb17205de2cce60643faeb045d121ed62e
+
+Package: ros-humble-astra-camera-msgs-dbgsym
+Package-Type: ddeb
+Architecture: amd64
+Version: 2-2025.06.23.10.16
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: ros-humble-astra-camera-msgs
+Maintainer: Joe Dong <mocun@orbbec.com>
+Installed-Size: 1211
+Depends: ros-humble-astra-camera-msgs (= 2-2025.06.23.10.16)
+Filename: ./ros-humble-astra-camera-msgs-dbgsym_2-2025.06.23.10.16_amd64.ddeb
+Size: 838604
+MD5sum: 2cee7775c599319bd53e92effa7c224e
+SHA1: a9a1033e7b667f55149fe31d408124fbf3117074
+SHA256: 83f6e068b689cfa5ebc52e1ffe16d6d9885c1f6768e91a17a01a463c546dd5c7
+SHA512: f7b6652c9a9011321911a3a21e77c4bec275226cacecd9b5696729083ec732a0d5995c67b4687b809a5eb9272911cbc7bf5f73b108fc3fe892c9ce03053e818a
+Description: debug symbols for ros-humble-astra-camera-msgs
+Build-Ids: 386b57544ae3375f2cdb30c6d360bb92a203c196 3e3b40d638e61542ad8557f169948f0021c317db 71ed5e2ac406b46490b5220f82dc23fb70970425 7e759aecf12e4332c99a2b21b5772a0c0b024a0e a37e755f81cc7c63e377e375c53a64ae0e63a70e a3bfc74b1c4b8deb205956641a5c170648f65653 b4f0af9163eada22dbd2905d199342f3d41726b3 b5380997e3d27cc44c9ce9e184daa9e66623a48c bd8a38e405ad14920807b9905cf518379bc9c753 d505118ddc175f92279f6e3238a073069446a86d dec530e8146a9bec3210f4ff9ee34b68da6193a4 e2c200080f0601c46fe14404298c006fb95c6c6e
+
+Package: ros-humble-astra-camera-msgs
+Architecture: amd64
+Version: 2-2025.06.23.10.16
+Priority: optional
+Section: misc
+Maintainer: Joe Dong <mocun@orbbec.com>
+Installed-Size: 1963
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libpython3.10 (>= 3.10.0), libstdc++6 (>= 5.2), ros-humble-fastcdr, ros-humble-rosidl-default-runtime, ros-humble-sensor-msgs
+Filename: ./ros-humble-astra-camera-msgs_2-2025.06.23.10.16_amd64.deb
+Size: 124166
+MD5sum: 5c8da0fbcd52546880ba1847c434509a
+SHA1: 9f2206bcad6049a8c5193644207e95d643a071d2
+SHA256: a02fb8cf5edc49e55d7c7136d2a637dcf3d792b629e4d189c136603afeb08771
+SHA512: 1730fc9659a9624e3eb9d1894c3a467c83d09a495fb09bd08610e88b383a46e0fa34170349bf5556c8821091458fccea5eb28a69fec9c7c94ea1248080e175fb
+Description: A package containing orbbec camera messages definitions.
+
+Package: ros-humble-astra-camera
+Architecture: amd64
+Version: 2-2025.06.23.10.18
+Priority: optional
+Section: misc
+Maintainer: Joe Dong <jian.dong@pobox.com>
+Installed-Size: 4858
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libgoogle-glog0v5 (>= 0.5.0+really0.4.0), libopencv-core4.5d (>= 4.5.4+dfsg), libopencv-imgproc4.5d (>= 4.5.4+dfsg), libopencv-stitching4.5d (>= 4.5.4+dfsg), libstdc++6 (>= 11), libudev1 (>= 183), libusb-1.0-0 (>= 2:1.0.8), ros-humble-libuvc, libgoogle-glog-dev, nlohmann-json3-dev, ros-humble-ament-index-cpp, ros-humble-ament-lint-auto, ros-humble-ament-lint-common, ros-humble-astra-camera-msgs, ros-humble-builtin-interfaces, ros-humble-camera-info-manager, ros-humble-class-loader, ros-humble-cv-bridge, ros-humble-draco-point-cloud-transport, ros-humble-image-geometry, ros-humble-image-publisher, ros-humble-image-transport, ros-humble-message-filters, ros-humble-point-cloud-transport, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs, ros-humble-std-msgs, ros-humble-std-srvs, ros-humble-tf2, ros-humble-tf2-eigen, ros-humble-tf2-msgs, ros-humble-tf2-ros, ros-humble-tf2-sensor-msgs, ros-humble-zlib-point-cloud-transport, ros-humble-zstd-point-cloud-transport
+Filename: ./ros-humble-astra-camera_2-2025.06.23.10.18_amd64.deb
+Size: 1075406
+MD5sum: 628f48132cebe598131c155700b81605
+SHA1: 974161e8318a0bdfdfd49979eb1d4ebe1758b14c
+SHA256: 3d90d2ba278b95786d1e68ae84eddac88cca858f1449fcffd26bfd17c35bc27b
+SHA512: cded91082ea93de5fe14b654cb9d3d608195b2b90eb0570314117644bf31f3af7d25ac97bf19961b835295da1839419ac73158117d81497aa3331707f007aa4b
+Description: TODO: Package description
+
+Package: ros-humble-libuvc-dbgsym
+Package-Type: ddeb
+Architecture: amd64
+Version: 2-2025.06.23.10.17
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: ros-humble-libuvc
+Maintainer: test <asdf@test.nl>
+Installed-Size: 123
+Depends: ros-humble-libuvc (= 2-2025.06.23.10.17)
+Filename: ./ros-humble-libuvc-dbgsym_2-2025.06.23.10.17_amd64.ddeb
+Size: 97360
+MD5sum: 4e22d79eae2c23594a728dcc8aac5324
+SHA1: 3f8c3a479bb7ad0e9ac2480ca26a53509da5511d
+SHA256: 78877a7b7ab9fd45a1252be79cd34dfcd62976101be17bb35818cd17facbe56c
+SHA512: e1f312d38a018f834a7171d228778e879924a4ab532c5c5aa512eb8eab07d24647002b8d75095e06d19786184005699edf720d416bba8686bd12c7dae28db92a
+Description: debug symbols for ros-humble-libuvc
+Build-Ids: a4a6a4556275fdf9de7cc71e8ce9c0ad107d760c
+
+Package: ros-humble-libuvc
+Architecture: amd64
+Version: 2-2025.06.23.10.17
+Priority: optional
+Section: misc
+Maintainer: test <asdf@test.nl>
+Installed-Size: 569
+Depends: libc6 (>= 2.34), libjpeg8 (>= 8c), libusb-1.0-0 (>= 2:1.0.23~), libjpeg-dev, libusb-1.0-0-dev
+Filename: ./ros-humble-libuvc_2-2025.06.23.10.17_amd64.deb
+Size: 60010
+MD5sum: 3d4076e6dfb84f47e1a4daad08fb7dc1
+SHA1: a3b3273a92086927e632c64d03b881297cbe64cc
+SHA256: 1d009e0a3dc7f5c1530eda33ff04a4ac42d40c20d87ad1d123760ffb3b30be79
+SHA512: 61748c95275143db1966af7f6e4f63879aa6e8fb98a2663d949adcd20a982632ccf6fada0ab5fe6333889a4175ea585eaad1af9a6ccd6ba66ff994160b3fbb2d
+Description: libuvc
+
