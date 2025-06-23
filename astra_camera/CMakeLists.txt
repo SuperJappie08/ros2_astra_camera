@@ -166,9 +166,14 @@ target_link_libraries(${PROJECT_NAME}
   -L${ORBBEC_OPENNI2_REDIST}
   )
 
-add_executable(${PROJECT_NAME}_node
-  src/main.cpp
-  )
+rclcpp_components_register_node(${PROJECT_NAME}
+  PLUGIN "astra_camera::OBCameraNodeFactory"
+  EXECUTABLE ${PROJECT_NAME}_node
+)
+
+# add_executable(${PROJECT_NAME}_node
+#   src/main.cpp
+#   )
 
 target_include_directories(${PROJECT_NAME}_node PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
@@ -263,7 +268,7 @@ install(DIRECTORY openni2_redist/${HOST_PLATFORM}/OpenNI2
 
 install(TARGETS list_devices_node
   clean_shm_node
-  ${PROJECT_NAME}_node
+  # ${PROJECT_NAME}_node
   DESTINATION lib/${PROJECT_NAME}/
   )
 
