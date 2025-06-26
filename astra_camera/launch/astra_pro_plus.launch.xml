@@ -57,6 +57,8 @@
     <arg name="oni_log_to_file" default="false"/>
     <arg name="enable_d2c_viewer" default="false"/>
     <arg name="enable_publish_extrinsic" default="false"/>
+
+    <node pkg="astra_camera" exec="clean_shm_node" />
     <group>
         <push-ros-namespace namespace="$(var camera_name)"/>
         <node name="camera" pkg="astra_camera" exec="astra_camera_node" output="screen">
