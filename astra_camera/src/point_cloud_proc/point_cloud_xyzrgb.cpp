@@ -40,15 +40,18 @@
 #include <sensor_msgs/point_cloud2_iterator.hpp>
 #include <sensor_msgs/msg/point_cloud2.hpp>
 
-#include "astra_camera/ros_detector.h"
-
-#if defined(ROS2_HUMBLE)
-  #include <cv_bridge/cv_bridge.h>
-  #include <image_geometry/pinhole_camera_model.h>
-#elif defined(ROS2_JAZZY)
+#if __has_include(<cv_bridge/cv_bridge.hpp>)
   #include <cv_bridge/cv_bridge.hpp>
-  #include <image_geometry/pinhole_camera_model.hpp>
+#else
+  #include <cv_bridge/cv_bridge.h>
 #endif
+
+#if __has_include(<image_geometry/pinhole_camera_model.hpp>)
+  #include <image_geometry/pinhole_camera_model.hpp>
+#else
+  #include <image_geometry/pinhole_camera_model.h>
+#endif
+
 #include <opencv2/imgproc/imgproc.hpp>
 #include <memory>
 #include <string>

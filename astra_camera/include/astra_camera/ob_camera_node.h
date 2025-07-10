@@ -14,13 +14,11 @@
 
 #include <rclcpp/rclcpp.hpp>
 
-#include "ros_detector.h"
-
 #include <opencv2/opencv.hpp>
-#if defined(ROS2_HUMBLE)
-#include <cv_bridge/cv_bridge.h>
-#elif defined(ROS2_JAZZY)
+#if __has_include(<cv_bridge/cv_bridge.hpp>)
 #include <cv_bridge/cv_bridge.hpp>
+#else
+#include <cv_bridge/cv_bridge.h>
 #endif
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <sensor_msgs/point_cloud2_iterator.hpp>
