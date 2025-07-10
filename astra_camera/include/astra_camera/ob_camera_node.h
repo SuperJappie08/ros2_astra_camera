@@ -18,7 +18,7 @@
 #include <opencv2/opencv.hpp>
 #if defined(ROS2_HUMBLE)
 #include <cv_bridge/cv_bridge.h>
-#elif defined(ROS2_JAMMY)
+#elif defined(ROS2_JAZZY)
 #include <cv_bridge/cv_bridge.hpp>
 #endif
 #include <sensor_msgs/msg/point_cloud2.hpp>

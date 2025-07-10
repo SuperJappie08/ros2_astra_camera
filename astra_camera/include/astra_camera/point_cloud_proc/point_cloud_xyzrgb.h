@@ -44,7 +44,7 @@
 #if defined(ROS2_HUMBLE)
   #include <cv_bridge/cv_bridge.h>
   #include <image_geometry/pinhole_camera_model.h>
-#elif defined(ROS2_JAMMY)
+#elif defined(ROS2_JAZZY)
   #include <cv_bridge/cv_bridge.hpp>
   #include <image_geometry/pinhole_camera_model.hpp>
 #endif

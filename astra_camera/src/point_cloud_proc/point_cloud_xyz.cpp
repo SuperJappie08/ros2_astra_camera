@@ -36,7 +36,7 @@
 #include <sensor_msgs/image_encodings.hpp>
 #if defined(ROS2_HUMBLE)
 #include <image_geometry/pinhole_camera_model.h>
-#elif defined(ROS2_JAMMY)
+#elif defined(ROS2_JAZZY)
 #include <image_geometry/pinhole_camera_model.hpp>
 #endif
 #include "astra_camera/point_cloud_proc/point_cloud_xyz.h"

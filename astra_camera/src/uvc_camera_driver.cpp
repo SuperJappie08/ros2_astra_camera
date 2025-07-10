@@ -14,7 +14,7 @@
 #include <opencv2/opencv.hpp>
 #if defined(ROS2_HUMBLE)
 #include <cv_bridge/cv_bridge.h>
-#elif defined(ROS2_JAMMY)
+#elif defined(ROS2_JAZZY)
 #include <cv_bridge/cv_bridge.hpp>
 #endif
 #include "astra_camera/uvc_camera_driver.h"

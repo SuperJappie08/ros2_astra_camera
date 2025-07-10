@@ -14,9 +14,9 @@
 #include <rclcpp/rclcpp.hpp>
 
 namespace astra_camera {
-  #if defined(ROS2_HUMBLE) // Jammy changed the name, just moving 'Set' forwards
+#if defined(ROS2_HUMBLE) // Jazzy changed the name, just moving 'Set' forwards
   using OnSetCallback = rclcpp::node_interfaces::NodeParametersInterface::OnParametersSetCallbackType;
-#elif defined(ROS2_JAMMY)
+#elif defined(ROS2_JAZZY)
   using OnSetCallback = rclcpp::node_interfaces::NodeParametersInterface::OnSetParametersCallbackType;
 #endif
 
