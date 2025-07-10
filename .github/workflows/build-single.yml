@@ -32,6 +32,8 @@ jobs:
               mv ./astra_* ./srcO/
               rm -rf ./src
       - uses: arendjan/ros-deb-builder-action@upmain # allows for failing builds
+        env:
+          ROS_DISTRO: ${{ inputs.ros_distro }}
         with:
           ROS_DISTRO: ${{ inputs.ros_distro }}
           DEB_DISTRO: ${{ env.DEB_DISTRO }}
