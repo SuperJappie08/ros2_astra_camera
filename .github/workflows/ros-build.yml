@@ -15,7 +15,7 @@ jobs:
           - ubuntu_version: '24.04'
             ros_distro: 'jazzy'
 
-    uses: ./.github/workflows/build-single.yaml
+    uses: ./.github/workflows/build-single.yml
     with:
       arch: ${{ matrix.arch }}
       ubuntu_version: ${{ matrix.ubuntu_version }}
