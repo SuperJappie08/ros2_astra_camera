@@ -26,6 +26,8 @@ jobs:
           submodules: 'recursive'
       - name: Extra Setup
         run: echo "DEB_DISTRO=$(lsb_release -sc)" >> $GITHUB_ENV
+      - name: Extra extra Setup
+        run: echo "export ROS_DISTRO=${{ inputs.ros_distro }}" >> $GITHUB_ENV
       - name: self-checkout
         run: |
               mkdir -p ./srcO/
