@@ -28,7 +28,6 @@ jobs:
         run: echo "DEB_DISTRO=$(lsb_release -sc)" >> $GITHUB_ENV
       - name: self-checkout
         run: |
-              ll -R
               mkdir -p ./srcO/
               mv ./astra_* ./srcO/
               rm -rf ./src
