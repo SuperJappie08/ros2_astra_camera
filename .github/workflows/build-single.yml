@@ -26,16 +26,12 @@ jobs:
           submodules: 'recursive'
       - name: Extra Setup
         run: echo "DEB_DISTRO=$(lsb_release -sc)" >> $GITHUB_ENV
-      - name: Extra extra Setup
-        run: echo "export ROS_DISTRO=${{ inputs.ros_distro }}" >> $GITHUB_ENV
       - name: self-checkout
         run: |
               mkdir -p ./srcO/
               mv ./astra_* ./srcO/
               rm -rf ./src
       - uses: arendjan/ros-deb-builder-action@upmain # allows for failing builds
-        env:
-          ROS_DISTRO: ${{ inputs.ros_distro }}
         with:
           ROS_DISTRO: ${{ inputs.ros_distro }}
           DEB_DISTRO: ${{ env.DEB_DISTRO }}

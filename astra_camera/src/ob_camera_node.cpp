@@ -12,6 +12,8 @@
 
 #include "astra_camera/ob_camera_node.h"
 #include "astra_camera/utils.h"
+#include "astra_camera/ros_detector.h"
+
 #if defined(ROS2_HUMBLE)
   #include <cv_bridge/cv_bridge.h>
 #elif defined(ROS2_JAZZY)

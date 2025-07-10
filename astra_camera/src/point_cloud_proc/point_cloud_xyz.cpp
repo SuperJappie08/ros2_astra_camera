@@ -32,6 +32,8 @@
 #include <sensor_msgs/point_cloud2_iterator.hpp>
 #include <memory>
 
+#include "astra_camera/ros_detector.h"
+
 #include <image_transport/image_transport.hpp>
 #include <sensor_msgs/image_encodings.hpp>
 #if defined(ROS2_HUMBLE)

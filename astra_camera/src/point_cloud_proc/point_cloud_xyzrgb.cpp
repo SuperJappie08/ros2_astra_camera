@@ -39,6 +39,9 @@
 #include <sensor_msgs/image_encodings.hpp>
 #include <sensor_msgs/point_cloud2_iterator.hpp>
 #include <sensor_msgs/msg/point_cloud2.hpp>
+
+#include "astra_camera/ros_detector.h"
+
 #if defined(ROS2_HUMBLE)
   #include <cv_bridge/cv_bridge.h>
   #include <image_geometry/pinhole_camera_model.h>

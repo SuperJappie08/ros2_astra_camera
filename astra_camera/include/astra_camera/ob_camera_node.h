@@ -14,6 +14,7 @@
 
 #include <rclcpp/rclcpp.hpp>
 
+#include "ros_detector.h"
 
 #include <opencv2/opencv.hpp>
 #if defined(ROS2_HUMBLE)

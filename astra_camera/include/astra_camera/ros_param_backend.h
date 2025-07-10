@@ -13,6 +13,8 @@
 #pragma once
 #include <rclcpp/rclcpp.hpp>
 
+#include "ros_detector.h"
+
 namespace astra_camera {
 #if defined(ROS2_HUMBLE) // Jazzy changed the name, just moving 'Set' forwards
   using OnSetCallback = rclcpp::node_interfaces::NodeParametersInterface::OnParametersSetCallbackType;
